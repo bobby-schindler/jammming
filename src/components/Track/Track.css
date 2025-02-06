@@ -1,0 +1,53 @@
+/* Track container */
+.Track {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(256, 256, 256, 0.8);
+  justify-content: space-between;
+  gap: 15px; /* Ensures spacing between text and button */
+  padding: 10px 0;
+}
+
+/* Action button styles (REINSTATED) */
+.Track-action {
+  cursor: pointer;
+  padding: 0.5rem;
+  font-size: 1.05rem;
+  transition: color 0.25s;
+  border: 0px;
+  background-color: transparent;
+  color: #fff;
+  flex-shrink: 0; /* Prevent button from shrinking */
+}
+
+.Track-action:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Track info section - critical fixes */
+.Track-information {
+  flex: 1; /* Grow to fill available space */
+  min-width: 0; /* Allow text truncation */
+  overflow: hidden;
+}
+
+/* Text truncation for both elements */
+.Track-information h3,
+.Track-information p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%; 
+  line-height: 1.4;
+  margin: 0; /* Remove default margins */
+}
+
+.Track-information h3 {
+  font-size: 1.05rem;
+  padding-bottom: 2px;
+}
+
+.Track-information p {
+  font-size: 0.83rem;
+  color: rgba(255, 255, 255, 0.8);
+}
