@@ -1,9 +1,11 @@
 @import "tailwindcss";
+@import "@fontsource/manrope";
 
-body,
+body,Jammming
 html,
 #root {
   height: 100%;
+  font-family: 'Manrope', sans-serif;
 }
 
 html {
@@ -11,12 +13,34 @@ html {
 }
 
 h1 {
-  padding: .77rem 0;
-  background-color: #010c3f;
+  position: relative;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: .5rem auto 1rem auto;
+  background: linear-gradient(
+    125deg,
+    #fff 10%,
+    rgba(108, 65, 233, .7) 90%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.88rem;
-  color: #fff;
+  max-width: 800px;
+
+}
+
+h1::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    150deg,
+    rgba(255, 255, 255, 0.3) 0%, /* Bright white highlight */
+    rgba(255, 255, 255, 0) 60% /* Fades to transparency */
+  );
+  mix-blend-mode: overlay;
 }
 
 h1 .highlight {
@@ -24,7 +48,7 @@ h1 .highlight {
 }
 
 h2 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Manrope', sans-serif;
   font-size: 1.55rem;
 }
 
@@ -35,7 +59,7 @@ h3 {
 .App {
   height: 100%;
   padding: 0 17% 10% 17%;
-  background-image: url('./background_photo_desktop.jpg');
+  background-image: url(./BG-Asset.svg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

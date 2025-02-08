@@ -2,10 +2,15 @@
 .Track {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid rgba(256, 256, 256, 0.8);
+  border-bottom: 1px solid rgba(256, 256, 256, 0.25);
   justify-content: space-between;
   gap: 15px; /* Ensures spacing between text and button */
-  padding: 10px 0;
+  padding: 10px 0 10px 10px;
+  transition: box-shadow 0.3s ease;
+}
+
+.Track:hover {
+  box-shadow: 0 0 5px 2px rgba(108, 65, 236, 0.5);
 }
 
 /* Action button styles (REINSTATED) */
@@ -49,5 +54,5 @@
 
 .Track-information p {
   font-size: 0.83rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.7);
 }

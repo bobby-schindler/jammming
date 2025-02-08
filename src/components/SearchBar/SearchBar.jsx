@@ -10,6 +10,12 @@ const SearchBar = ({ onSearch }) => {
         setSearchTerm(e.target.value);
     }, []);
 
+    const handleKeyDown = (e) => {
+        if(e.key === "Enter" || e.keyCode === 13) {
+            onSearch(searchTerm);
+        }
+    }
+
     const search = useCallback(() => {
         onSearch(searchTerm);
     }, [onSearch, searchTerm]);
@@ -19,8 +25,9 @@ const SearchBar = ({ onSearch }) => {
             <input
                 placeholder="Enter A Song Title"
                 onChange={handleSearchTermChange}
+                onKeyDown={handleKeyDown}
             />
-            <button className="SearchButton" onClick={search}>SEARCH</button>
+            <button className="SearchButton" onClick={search}>Search</button>
         </div>
     );
 };
